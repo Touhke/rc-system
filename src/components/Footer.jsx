@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
 import {
   FaWhatsapp, FaEnvelope, FaPhone, FaMapMarkerAlt,
-  FaFacebook, FaLinkedin, FaTwitter,
+  FaFacebook, FaLinkedin,
 } from 'react-icons/fa';
 import { WA_LINK, PHONE_PRIMARY, PHONE_SECONDARY, EMAIL } from '../data/index.js';
 import logo from '../assets/logo.jpg';
 
-const quickLinks   = [
+const quickLinks = [
   { label: 'Accueil',      href: '#home'     },
   { label: 'Nos Services', href: '#services' },
   { label: 'Pourquoi Nous',href: '#why-us'   },
@@ -53,7 +53,6 @@ export default function Footer() {
 
           {/* ── Brand ── */}
           <div>
-            {/* Logo avec image */}
             <a
               href="#home"
               onClick={e => { e.preventDefault(); handleNav('#home'); }}
@@ -66,8 +65,7 @@ export default function Footer() {
               }}
             >
               <div style={{
-                width: '48px',
-                height: '48px',
+                width: '48px', height: '48px',
                 borderRadius: '10px',
                 overflow: 'hidden',
                 border: '2px solid rgba(96,165,250,0.35)',
@@ -77,20 +75,10 @@ export default function Footer() {
                 alignItems: 'center',
                 justifyContent: 'center',
               }}>
-                <img
-                  src={logo}
-                  alt="R&C System"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
+                <img src={logo} alt="R&C System" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div>
-                <div style={{
-                  fontFamily: 'var(--font-display, "Syne", sans-serif)',
-                  fontWeight: 800,
-                  color: 'white',
-                  fontSize: '1.05rem',
-                  lineHeight: 1.1,
-                }}>
+                <div style={{ fontFamily: 'var(--font-display, "Syne", sans-serif)', fontWeight: 800, color: 'white', fontSize: '1.05rem', lineHeight: 1.1 }}>
                   R&amp;C System
                 </div>
                 <div style={{ fontSize: '0.62rem', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
@@ -103,12 +91,11 @@ export default function Footer() {
               La solution parfaite des T.I.C. en Afrique. Votre partenaire de confiance pour tous vos besoins informatiques au Cameroun.
             </p>
 
-            {/* Social */}
             <div style={{ display: 'flex', gap: '10px' }}>
               {[
-                { icon: <FaWhatsapp />, href: WA_LINK,  color: '#25D366' },
-                { icon: <FaFacebook />, href: '#',       color: '#1877F2' },
-                { icon: <FaLinkedin />, href: '#',       color: '#0A66C2' },
+                { icon: <FaWhatsapp />, href: WA_LINK, color: '#25D366' },
+                { icon: <FaFacebook />, href: '#',      color: '#1877F2' },
+                { icon: <FaLinkedin />, href: '#',      color: '#0A66C2' },
               ].map((s, i) => (
                 <a
                   key={i}
@@ -120,26 +107,14 @@ export default function Footer() {
                     borderRadius: '8px',
                     background: 'rgba(255,255,255,0.05)',
                     border: '1px solid rgba(255,255,255,0.08)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
                     color: 'rgba(255,255,255,0.55)',
                     fontSize: '1rem',
                     textDecoration: 'none',
                     transition: 'all 0.2s',
                   }}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.background    = s.color;
-                    e.currentTarget.style.color         = 'white';
-                    e.currentTarget.style.borderColor   = s.color;
-                    e.currentTarget.style.transform     = 'translateY(-2px)';
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.background    = 'rgba(255,255,255,0.05)';
-                    e.currentTarget.style.color         = 'rgba(255,255,255,0.55)';
-                    e.currentTarget.style.borderColor   = 'rgba(255,255,255,0.08)';
-                    e.currentTarget.style.transform     = 'translateY(0)';
-                  }}
+                  onMouseEnter={e => { e.currentTarget.style.background = s.color; e.currentTarget.style.color = 'white'; e.currentTarget.style.borderColor = s.color; e.currentTarget.style.transform = 'translateY(-2px)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; e.currentTarget.style.color = 'rgba(255,255,255,0.55)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.transform = 'translateY(0)'; }}
                 >
                   {s.icon}
                 </a>
@@ -158,15 +133,7 @@ export default function Footer() {
                   <a
                     href={l.href}
                     onClick={e => { e.preventDefault(); handleNav(l.href); }}
-                    style={{
-                      fontSize: '0.88rem',
-                      color: 'rgba(255,255,255,0.65)',
-                      textDecoration: 'none',
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '8px',
-                      transition: 'color 0.2s',
-                    }}
+                    style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.65)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', transition: 'color 0.2s' }}
                     {...linkHover()}
                   >
                     <span style={{ width: 4, height: 4, borderRadius: '50%', background: 'rgb(96,165,250)', flexShrink: 0 }} />
@@ -189,15 +156,7 @@ export default function Footer() {
                     href={WA_LINK}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{
-                      fontSize: '0.88rem',
-                      color: 'rgba(255,255,255,0.65)',
-                      textDecoration: 'none',
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '8px',
-                      transition: 'color 0.2s',
-                    }}
+                    style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.65)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', transition: 'color 0.2s' }}
                     {...linkHover()}
                   >
                     <span style={{ width: 4, height: 4, borderRadius: '50%', background: 'rgb(96,165,250)', flexShrink: 0 }} />
@@ -215,10 +174,11 @@ export default function Footer() {
             </h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
               {[
-                { icon: <FaPhone />,        value: PHONE_PRIMARY,                              href: waPhone('237690722872') },
-                { icon: <FaPhone />,        value: PHONE_SECONDARY,                            href: waPhone('237674161584') },
-                { icon: <FaEnvelope />,     value: EMAIL,                                      href: `mailto:${EMAIL}`       },
-                { icon: <FaMapMarkerAlt />, value: "Biyem-Assi Lycée, En face d'Express Union", href: '#'                    },
+                // ✅ CORRIGÉ : 674161584 en premier (WhatsApp actif)
+                { icon: <FaPhone />,        value: PHONE_PRIMARY,                               href: waPhone('237674161584') },
+                { icon: <FaPhone />,        value: PHONE_SECONDARY,                             href: waPhone('237690722872') },
+                { icon: <FaEnvelope />,     value: EMAIL,                                       href: `mailto:${EMAIL}`       },
+                { icon: <FaMapMarkerAlt />, value: "Biyem-Assi Lycée, En face d'Express Union", href: '#'                     },
               ].map((c, i) => (
                 <a
                   key={i}
@@ -226,14 +186,9 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
-                    display: 'flex',
-                    alignItems: 'flex-start',
-                    gap: '10px',
-                    fontSize: '0.86rem',
-                    color: 'rgba(255,255,255,0.65)',
-                    textDecoration: 'none',
-                    transition: 'color 0.2s',
-                    lineHeight: 1.5,
+                    display: 'flex', alignItems: 'flex-start', gap: '10px',
+                    fontSize: '0.86rem', color: 'rgba(255,255,255,0.65)',
+                    textDecoration: 'none', transition: 'color 0.2s', lineHeight: 1.5,
                   }}
                   {...linkHover()}
                 >
@@ -247,29 +202,41 @@ export default function Footer() {
 
         {/* ── Bottom bar ── */}
         <div style={{
-          padding: '22px 0',
+          padding: '20px 0',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
           flexWrap: 'wrap',
-          gap: '12px',
+          gap: '8px',
+          borderTop: '1px solid rgba(255,255,255,0.04)',
         }}>
+          {/* Copyright */}
           <p style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.4)' }}>
             © {new Date().getFullYear()} R&amp;C System. Tous droits réservés.
           </p>
+
+          {/* ✅ NOUVEAU : Mention développeur — subtile, au centre */}
+          <p style={{
+            fontSize: '0.72rem',
+            color: 'rgba(255,255,255,0.2)',
+            letterSpacing: '0.04em',
+            textAlign: 'center',
+          }}>
+            Développé par{' '}
+            <span style={{ color: 'rgba(255,255,255,0.3)', fontWeight: 500 }}>
+              Touhke Bilal
+            </span>
+          </p>
+
+          {/* WhatsApp link */}
           <a
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '6px',
-              color: '#25D366',
-              fontSize: '0.85rem',
-              fontWeight: 600,
-              textDecoration: 'none',
-              transition: 'opacity 0.2s',
+              display: 'inline-flex', alignItems: 'center', gap: '6px',
+              color: '#25D366', fontSize: '0.85rem', fontWeight: 600,
+              textDecoration: 'none', transition: 'opacity 0.2s',
             }}
             onMouseEnter={e => e.currentTarget.style.opacity = '0.75'}
             onMouseLeave={e => e.currentTarget.style.opacity = '1'}

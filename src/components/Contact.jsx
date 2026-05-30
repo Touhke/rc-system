@@ -40,14 +40,13 @@ export default function Contact() {
           gap: '32px',
           marginBottom: '48px',
         }}>
-          {/* Contact Cards */}
           {[
             {
               icon: <FaPhone />,
               title: 'Téléphone Principal',
               value: PHONE_PRIMARY,
               sub: 'Cliquez pour ouvrir WhatsApp',
-              href: waPhone('237690722872'),
+              href: waPhone('+237 674 161 584'),
               color: '#25D366',
               bg: 'rgba(37,211,102,0.08)',
               border: 'rgba(37,211,102,0.2)',
@@ -57,7 +56,7 @@ export default function Contact() {
               title: 'Téléphone Secondaire',
               value: PHONE_SECONDARY,
               sub: 'Cliquez pour ouvrir WhatsApp',
-              href: waPhone('237674161584'),
+              href: waPhone('+237 690 722 872'),
               color: 'rgb(96, 165, 250)',
               bg: 'rgba(59, 130, 246, 0.08)',
               border: 'rgba(59, 130, 246, 0.2)',
@@ -143,7 +142,6 @@ export default function Contact() {
           marginTop: '48px',
           marginBottom: '48px',
         }}>
-          {/* Location details card */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -176,7 +174,7 @@ export default function Contact() {
             }}>
               Venez nous rencontrer directement pour vos besoins de maintenance informatique, configuration de réseaux ou conseils IT. Nous sommes idéalement situés à Yaoundé.
             </p>
-            
+
             <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '32px' }}>
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '14px' }}>
                 <div style={{
@@ -200,7 +198,7 @@ export default function Contact() {
                 </div>
               </div>
             </div>
- 
+
             <a
               href="https://maps.google.com/?q=Biyem-Assi+Lycée+Yaoundé"
               target="_blank"
@@ -216,8 +214,7 @@ export default function Contact() {
               Obtenir l'itinéraire
             </a>
           </motion.div>
- 
-          {/* Map Frame Card */}
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -252,7 +249,7 @@ export default function Contact() {
           </motion.div>
         </div>
 
-        {/* Hours + Main WhatsApp CTA */}
+        {/* WhatsApp CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -324,6 +321,7 @@ export default function Contact() {
               borderRadius: '8px',
               fontWeight: 700,
               fontSize: '1.1rem',
+              textDecoration: 'none',
               boxShadow: '0 4px 15px rgba(37,211,102,0.3)',
               transition: 'transform 0.2s, box-shadow 0.2s',
             }}
@@ -334,10 +332,16 @@ export default function Contact() {
             Ouvrir WhatsApp Maintenant
           </a>
 
+          {/* ✅ CORRIGÉ : lien WhatsApp au lieu de tel: */}
           <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.85rem' }}>
             Ou appelez le{' '}
-            <a href={`tel:+237690722872`} style={{ color: 'rgba(255,255,255,0.7)', fontWeight: 600 }}>
-              +237 690 722 872
+            <a
+              href={`https://wa.me/237674161584?text=${encodeURIComponent("Bonjour R&C System, je souhaite avoir plus d'informations sur vos services.")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: 'rgba(255,255,255,0.7)', fontWeight: 600, textDecoration: 'none' }}
+            >
+              +237 674 161 584
             </a>
           </div>
         </motion.div>

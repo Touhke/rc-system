@@ -1,8 +1,8 @@
-export const WA_NUMBER = "237690722872";
+export const WA_NUMBER = "237674161584";
 export const WA_MESSAGE = encodeURIComponent("Bonjour R&C System, je souhaite avoir plus d'informations sur vos services.");
 export const WA_LINK = `https://wa.me/${WA_NUMBER}?text=${WA_MESSAGE}`;
-export const PHONE_PRIMARY = "+237 690 722 872";
-export const PHONE_SECONDARY = "+237 674 161 584";
+export const PHONE_PRIMARY   = "+237 674 161 584";
+export const PHONE_SECONDARY = "+237 690 722 872";
 export const EMAIL = "r_csystem@yahoo.com";
 export const ADDRESS = "Biyem-Assi Lycée, En face d'Express Union, Cameroun";
 
