@@ -2,17 +2,18 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaWhatsapp, FaBars, FaTimes } from 'react-icons/fa';
 import { WA_LINK } from '../data/index.js';
+import logo from '../assets/logo.jpg';
 
 const navLinks = [
-  { label: 'Accueil', href: '#home' },
-  { label: 'Services', href: '#services' },
-  { label: 'Pourquoi Nous', href: '#why-us' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Accueil',      href: '#home'     },
+  { label: 'Services',     href: '#services' },
+  { label: 'Pourquoi Nous',href: '#why-us'   },
+  { label: 'Contact',      href: '#contact'  },
 ];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled]   = useState(false);
+  const [menuOpen, setMenuOpen]   = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -34,97 +35,163 @@ export default function Navbar() {
         transition={{ duration: 0.6, ease: 'easeOut' }}
         style={{
           position: 'fixed',
-          top: 0,
-          left: 0,
-          right: 0,
+          top: 0, left: 0, right: 0,
           zIndex: 1000,
-          transition: 'all 0.3s ease',
-          background: scrolled
-            ? 'rgba(255,255,255,0.98)'
-            : 'transparent',
-          backdropFilter: scrolled ? 'blur(10px)' : 'none',
-          boxShadow: scrolled ? '0 1px 3px rgba(15, 23, 42, 0.08)' : 'none',
-          borderBottom: scrolled ? '1px solid rgba(15, 23, 42, 0.06)' : 'none',
+          transition: 'background 0.3s, box-shadow 0.3s',
+          background: scrolled ? 'rgba(255,255,255,0.97)' : 'transparent',
+          backdropFilter: scrolled ? 'blur(12px)' : 'none',
+          boxShadow: scrolled ? '0 1px 12px rgba(15,23,42,0.08)' : 'none',
+          borderBottom: scrolled ? '1px solid rgba(15,23,42,0.06)' : 'none',
         }}
       >
-        <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 24px', height: '72px' }}>
-          {/* Logo */}
-          <a href="#home" onClick={(e) => { e.preventDefault(); handleNav('#home'); }} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <div style={{
-              width: 40, height: 40, borderRadius: '8px',
-              background: '#1a1f3a',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
+        <div
+          className="container"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            padding: '0 24px',
+            height: '72px',
+          }}
+        >
+          {/* ── Logo ── */}
+          <a
+            href="#home"
+            onClick={e => { e.preventDefault(); handleNav('#home'); }}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px',
+              textDecoration: 'none',
               flexShrink: 0,
-              border: '2px solid rgb(96, 165, 250)',
+            }}
+          >
+            <div style={{
+              width: '48px',
+              height: '48px',
+              borderRadius: '10px',
+              overflow: 'hidden',
+              border: scrolled ? '2px solid rgba(10,77,157,0.2)' : '2px solid rgba(255,255,255,0.3)',
+              transition: 'border-color 0.3s',
+              flexShrink: 0,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              background: 'white',
             }}>
-              <span style={{ color: 'rgb(96, 165, 250)', fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: '1rem' }}>R&C</span>
+              <img
+                src={logo}
+                alt="R&C System logo"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                }}
+              />
             </div>
             <div>
               <div style={{
-                fontFamily: 'var(--font-display)',
+                fontFamily: 'var(--font-display, "Syne", sans-serif)',
                 fontWeight: 800,
-                fontSize: '1.15rem',
-                color: scrolled ? '#1a1f3a' : 'white',
+                fontSize: '1.1rem',
+                color: scrolled ? '#0d1b3e' : 'white',
                 lineHeight: 1.1,
                 transition: 'color 0.3s',
-              }}>R&C System</div>
+              }}>
+                R&amp;C System
+              </div>
               <div style={{
-                fontSize: '0.65rem',
-                color: scrolled ? 'var(--text-muted)' : 'rgba(255,255,255,0.65)',
-                letterSpacing: '0.05em',
+                fontSize: '0.62rem',
+                letterSpacing: '0.06em',
+                textTransform: 'uppercase',
+                color: scrolled ? '#64748b' : 'rgba(255,255,255,0.6)',
                 transition: 'color 0.3s',
-              }}>Solutions IT & Réseaux</div>
+              }}>
+                Solutions IT &amp; Réseaux
+              </div>
             </div>
           </a>
 
-          {/* Desktop Nav */}
-          <nav style={{ display: 'flex', alignItems: 'center', gap: '8px' }} className="desktop-nav">
-            {navLinks.map((link) => (
+          {/* ── Desktop Nav ── */}
+          <nav
+            style={{ display: 'flex', alignItems: 'center', gap: '4px' }}
+            className="desktop-nav"
+          >
+            {navLinks.map(link => (
               <a
                 key={link.href}
                 href={link.href}
-                onClick={(e) => { e.preventDefault(); handleNav(link.href); }}
+                onClick={e => { e.preventDefault(); handleNav(link.href); }}
                 style={{
-                  padding: '8px 16px',
-                  borderRadius: '6px',
-                  fontSize: '0.95rem',
+                  padding: '8px 15px',
+                  borderRadius: '7px',
+                  fontSize: '0.92rem',
                   fontWeight: 500,
-                  color: scrolled ? '#1a1f3a' : 'rgba(255,255,255,0.85)',
+                  color: scrolled ? '#0d1b3e' : 'rgba(255,255,255,0.85)',
+                  textDecoration: 'none',
                   transition: 'all 0.2s',
                 }}
                 onMouseEnter={e => {
-                  e.currentTarget.style.background = scrolled ? 'rgba(59, 130, 246, 0.1)' : 'rgba(255,255,255,0.1)';
-                  e.currentTarget.style.color = scrolled ? 'rgb(96, 165, 250)' : 'white';
+                  e.currentTarget.style.background = scrolled
+                    ? 'rgba(10,77,157,0.08)'
+                    : 'rgba(255,255,255,0.1)';
+                  e.currentTarget.style.color = scrolled ? '#0A4D9D' : 'white';
                 }}
                 onMouseLeave={e => {
                   e.currentTarget.style.background = 'transparent';
-                  e.currentTarget.style.color = scrolled ? '#1a1f3a' : 'rgba(255,255,255,0.85)';
+                  e.currentTarget.style.color = scrolled ? '#0d1b3e' : 'rgba(255,255,255,0.85)';
                 }}
               >
                 {link.label}
               </a>
             ))}
+
             <a
               href={WA_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-whatsapp"
-              style={{ marginLeft: '8px', padding: '10px 22px', fontSize: '0.9rem' }}
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                marginLeft: '10px',
+                padding: '10px 20px',
+                borderRadius: '8px',
+                background: '#25D366',
+                color: 'white',
+                fontSize: '0.9rem',
+                fontWeight: 700,
+                textDecoration: 'none',
+                transition: 'transform 0.2s, box-shadow 0.2s',
+                boxShadow: '0 3px 12px rgba(37,211,102,0.3)',
+                whiteSpace: 'nowrap',
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 6px 18px rgba(37,211,102,0.4)';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 3px 12px rgba(37,211,102,0.3)';
+              }}
             >
-              <FaWhatsapp size={18} />
+              <FaWhatsapp size={17} />
               WhatsApp
             </a>
           </nav>
 
-          {/* Mobile Menu Toggle */}
+          {/* ── Mobile Toggle ── */}
           <button
-            onClick={() => setMenuOpen(!menuOpen)}
+            onClick={() => setMenuOpen(v => !v)}
             className="mobile-menu-btn"
             style={{
               background: 'none',
-              color: scrolled ? '#1a1f3a' : 'white',
-              fontSize: '1.4rem',
+              border: 'none',
+              color: scrolled ? '#0d1b3e' : 'white',
+              fontSize: '1.5rem',
+              cursor: 'pointer',
               display: 'none',
+              padding: '4px',
             }}
             aria-label="Menu"
           >
@@ -133,42 +200,42 @@ export default function Navbar() {
         </div>
       </motion.header>
 
-      {/* Mobile Menu */}
+      {/* ── Mobile Menu ── */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -16 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.25 }}
+            exit={{ opacity: 0, y: -16 }}
+            transition={{ duration: 0.22 }}
             style={{
               position: 'fixed',
               top: '72px',
-              left: 0,
-              right: 0,
+              left: 0, right: 0,
               zIndex: 999,
               background: 'rgba(255,255,255,0.98)',
-              backdropFilter: 'blur(10px)',
-              padding: '20px 24px 28px',
-              boxShadow: '0 1px 3px rgba(15, 23, 42, 0.08)',
-              borderBottom: '1px solid rgba(15, 23, 42, 0.06)',
+              backdropFilter: 'blur(12px)',
+              padding: '16px 24px 28px',
+              boxShadow: '0 8px 32px rgba(15,23,42,0.1)',
+              borderBottom: '1px solid rgba(15,23,42,0.06)',
             }}
           >
             {navLinks.map((link, i) => (
               <motion.a
                 key={link.href}
                 href={link.href}
-                onClick={(e) => { e.preventDefault(); handleNav(link.href); }}
-                initial={{ opacity: 0, x: -16 }}
+                onClick={e => { e.preventDefault(); handleNav(link.href); }}
+                initial={{ opacity: 0, x: -14 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.07 }}
+                transition={{ delay: i * 0.06 }}
                 style={{
                   display: 'block',
                   padding: '14px 0',
-                  fontSize: '1.1rem',
+                  fontSize: '1.05rem',
                   fontWeight: 600,
-                  color: '#1a1f3a',
-                  borderBottom: '1px solid rgba(15, 23, 42, 0.06)',
+                  color: '#0d1b3e',
+                  borderBottom: '1px solid rgba(15,23,42,0.06)',
+                  textDecoration: 'none',
                 }}
               >
                 {link.label}
@@ -178,8 +245,20 @@ export default function Navbar() {
               href={WA_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-whatsapp"
-              style={{ marginTop: '20px', width: '100%', justifyContent: 'center' }}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '10px',
+                marginTop: '20px',
+                padding: '14px',
+                borderRadius: '10px',
+                background: '#25D366',
+                color: 'white',
+                fontSize: '1rem',
+                fontWeight: 700,
+                textDecoration: 'none',
+              }}
             >
               <FaWhatsapp size={20} />
               Contacter via WhatsApp
@@ -190,8 +269,8 @@ export default function Navbar() {
 
       <style>{`
         @media (max-width: 768px) {
-          .desktop-nav { display: none !important; }
-          .mobile-menu-btn { display: flex !important; }
+          .desktop-nav      { display: none !important; }
+          .mobile-menu-btn  { display: flex !important; }
         }
       `}</style>
     </>
