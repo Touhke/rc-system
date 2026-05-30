@@ -1,10 +1,31 @@
+import Navbar from './components/Navbar.jsx';
+import Hero from './components/Hero.jsx';
+import Services from './components/Services.jsx';
+import WhyUs from './components/WhyUs.jsx';
+import Process from './components/Process.jsx';
+import Stats from './components/Stats.jsx';
+import Testimonials from './components/Testimonials.jsx';
+import Contact from './components/Contact.jsx';
+import FinalCTA from './components/FinalCTA.jsx';
+import Footer from './components/Footer.jsx';
+import FloatingWhatsApp from './components/FloatingWhatsApp.jsx';
 
-function App() {
+export default function App() {
   return (
-    <div>
-      <h1>R&C System - En construction</h1>
-    </div>
-  )
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <Stats />
+        <Services />
+        <WhyUs />
+        <Process />
+        <Testimonials />
+        <Contact />
+        <FinalCTA />
+      </main>
+      <Footer />
+      <FloatingWhatsApp />
+    </>
+  );
 }
-
-export default App
