@@ -135,6 +135,123 @@ export default function Contact() {
           ))}
         </div>
 
+        {/* Google Maps and Location Section */}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+          gap: '32px',
+          marginTop: '48px',
+          marginBottom: '48px',
+        }}>
+          {/* Location details card */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            style={{
+              background: 'var(--off-white)',
+              border: '1.5px solid var(--border-gray)',
+              borderRadius: '12px',
+              padding: '36px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+            }}
+          >
+            <h3 style={{
+              fontFamily: 'var(--font-display)',
+              fontSize: '1.5rem',
+              fontWeight: 850,
+              color: 'var(--navy-dark)',
+              marginBottom: '16px',
+            }}>
+              Notre Bureau Physique
+            </h3>
+            <p style={{
+              color: 'var(--text-muted)',
+              fontSize: '0.95rem',
+              lineHeight: 1.6,
+              marginBottom: '28px',
+            }}>
+              Venez nous rencontrer directement pour vos besoins de maintenance informatique, configuration de réseaux ou conseils IT. Nous sommes idéalement situés à Yaoundé.
+            </p>
+            
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '32px' }}>
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '14px' }}>
+                <div style={{
+                  width: '36px', height: '36px',
+                  borderRadius: '8px',
+                  background: 'rgba(59, 130, 246, 0.1)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: 'var(--accent)',
+                  fontSize: '1.1rem',
+                  flexShrink: 0,
+                }}>
+                  <FaMapMarkerAlt />
+                </div>
+                <div>
+                  <div style={{ fontWeight: 700, color: 'var(--navy-dark)', fontSize: '0.95rem', marginBottom: '2px' }}>Adresse Principale</div>
+                  <div style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: 1.4 }}>
+                    {ADDRESS}
+                  </div>
+                </div>
+              </div>
+            </div>
+ 
+            <a
+              href="https://maps.google.com/?q=Biyem-Assi+Lycée+Yaoundé"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline"
+              style={{
+                alignSelf: 'flex-start',
+                fontSize: '0.95rem',
+                padding: '12px 28px',
+                textAlign: 'center',
+              }}
+            >
+              Obtenir l'itinéraire
+            </a>
+          </motion.div>
+ 
+          {/* Map Frame Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            style={{
+              background: 'white',
+              border: '1.5px solid var(--border-gray)',
+              borderRadius: '12px',
+              padding: '12px',
+              boxShadow: 'var(--shadow-sm)',
+              minHeight: '380px',
+              position: 'relative',
+              overflow: 'hidden',
+            }}
+          >
+            <iframe
+              title="R&C System Location Map"
+              src="https://maps.google.com/maps?q=Biyem-Assi%20Lyc%C3%A9e,%20En%20face%20d'Express%20Union,%20Yaound%C3%A9,%20Cameroun&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="100%"
+              style={{
+                border: 0,
+                borderRadius: '8px',
+                minHeight: '356px',
+                display: 'block',
+              }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </motion.div>
+        </div>
+
         {/* Hours + Main WhatsApp CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
