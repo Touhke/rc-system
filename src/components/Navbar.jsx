@@ -57,11 +57,11 @@ export default function Navbar() {
               flexShrink: 0,
               border: '2px solid rgb(96, 165, 250)',
             }}>
-              <span style={{ color: 'rgb(96, 165, 250)', fontFamily: 'Syne, sans-serif', fontWeight: 900, fontSize: '1rem' }}>R&C</span>
+              <span style={{ color: 'rgb(96, 165, 250)', fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: '1rem' }}>R&C</span>
             </div>
             <div>
               <div style={{
-                fontFamily: 'Syne, sans-serif',
+                fontFamily: 'var(--font-display)',
                 fontWeight: 800,
                 fontSize: '1.15rem',
                 color: scrolled ? '#1a1f3a' : 'white',
@@ -70,7 +70,7 @@ export default function Navbar() {
               }}>R&C System</div>
               <div style={{
                 fontSize: '0.65rem',
-                color: scrolled ? '#8b94a5' : 'rgba(255,255,255,0.65)',
+                color: scrolled ? 'var(--text-muted)' : 'rgba(255,255,255,0.65)',
                 letterSpacing: '0.05em',
                 transition: 'color 0.3s',
               }}>Solutions IT & Réseaux</div>

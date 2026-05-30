@@ -56,14 +56,14 @@ export default function Footer() {
                 alignItems: 'center',
                 justifyContent: 'center',
               }}>
-                <span style={{ color: 'rgb(96, 165, 250)', fontFamily: 'Syne, sans-serif', fontWeight: 900, fontSize: '0.9rem' }}>R&C</span>
+                <span style={{ color: 'rgb(96, 165, 250)', fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: '0.9rem' }}>R&C</span>
               </div>
               <div>
-                <div style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, color: 'white', fontSize: '1.1rem' }}>R&C System</div>
+                <div style={{ fontFamily: 'var(--font-display)', fontWeight: 800, color: 'white', fontSize: '1.1rem' }}>R&C System</div>
                 <div style={{ fontSize: '0.65rem', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.05em' }}>Solutions IT & Réseaux</div>
               </div>
             </div>
-            <p style={{ fontSize: '0.9rem', lineHeight: 1.7, marginBottom: '24px', color: 'rgba(255,255,255,0.5)' }}>
+            <p style={{ fontSize: '0.9rem', lineHeight: 1.7, marginBottom: '24px', color: 'rgba(255,255,255,0.72)' }}>
               La solution parfaite des T.I.C. en Afrique. Votre partenaire de confiance pour tous vos besoins informatiques au Cameroun.
             </p>
             {/* Social */}
@@ -101,7 +101,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, color: 'white', fontSize: '1rem', marginBottom: '20px' }}>
+            <h4 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, color: 'white', fontSize: '1rem', marginBottom: '20px' }}>
               Liens Rapides
             </h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
@@ -112,7 +112,7 @@ export default function Footer() {
                     onClick={(e) => { e.preventDefault(); handleNav(l.href); }}
                     style={{
                       fontSize: '0.9rem',
-                      color: 'rgba(255,255,255,0.55)',
+                      color: 'rgba(255,255,255,0.75)',
                       transition: 'color 0.2s',
                       display: 'flex',
                       alignItems: 'center',
@@ -131,7 +131,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, color: 'white', fontSize: '1rem', marginBottom: '20px' }}>
+            <h4 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, color: 'white', fontSize: '1rem', marginBottom: '20px' }}>
               Nos Services
             </h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
@@ -143,7 +143,7 @@ export default function Footer() {
                     rel="noopener noreferrer"
                     style={{
                       fontSize: '0.9rem',
-                      color: 'rgba(255,255,255,0.55)',
+                      color: 'rgba(255,255,255,0.75)',
                       transition: 'color 0.2s',
                       display: 'flex',
                       alignItems: 'center',
@@ -162,7 +162,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, color: 'white', fontSize: '1rem', marginBottom: '20px' }}>
+            <h4 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, color: 'white', fontSize: '1rem', marginBottom: '20px' }}>
               Contact
             </h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
@@ -182,7 +182,7 @@ export default function Footer() {
                     alignItems: 'flex-start',
                     gap: '10px',
                     fontSize: '0.88rem',
-                    color: 'rgba(255,255,255,0.55)',
+                    color: 'rgba(255,255,255,0.75)',
                     transition: 'color 0.2s',
                   }}
                   onMouseEnter={e => e.currentTarget.style.color = 'rgb(96, 165, 250)'}
@@ -205,7 +205,7 @@ export default function Footer() {
           flexWrap: 'wrap',
           gap: '12px',
         }}>
-          <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.35)' }}>
+          <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.52)' }}>
             © {new Date().getFullYear()} R&C System. Tous droits réservés.
           </p>
           <a

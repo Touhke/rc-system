@@ -113,7 +113,7 @@ export default function Process() {
                 </div>
 
                 <h3 style={{
-                  fontFamily: 'Syne, sans-serif',
+                  fontFamily: 'var(--font-display)',
                   fontSize: '1.1rem',
                   fontWeight: 700,
                   color: '#1a1f3a',
@@ -123,7 +123,7 @@ export default function Process() {
                 </h3>
                 <p style={{
                   fontSize: '0.9rem',
-                  color: '#8b94a5',
+                  color: 'var(--text-muted)',
                   lineHeight: 1.65,
                   maxWidth: '200px',
                 }}>
@@ -150,7 +150,7 @@ export default function Process() {
           }}
         >
           <h3 style={{
-            fontFamily: 'Syne, sans-serif',
+            fontFamily: 'var(--font-display)',
             fontSize: '1.5rem',
             fontWeight: 700,
             color: '#1a1f3a',
@@ -158,7 +158,7 @@ export default function Process() {
           }}>
             Prêt à commencer ?
           </h3>
-          <p style={{ color: '#8b94a5', marginBottom: '24px' }}>
+          <p style={{ color: 'var(--text-muted)', marginBottom: '24px' }}>
             Contactez-nous dès maintenant et obtenez une assistance rapide.
           </p>
           <a

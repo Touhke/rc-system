@@ -118,7 +118,7 @@ export default function Services() {
 
                 {/* Content */}
                 <h3 style={{
-                  fontFamily: 'Syne, sans-serif',
+                  fontFamily: 'var(--font-display)',
                   fontSize: '1.1rem',
                   fontWeight: 700,
                   color: '#1a1f3a',
@@ -128,7 +128,7 @@ export default function Services() {
                 </h3>
                 <p style={{
                   fontSize: '0.92rem',
-                  color: '#8b94a5',
+                  color: 'var(--text-muted)',
                   lineHeight: 1.65,
                   marginBottom: '24px',
                 }}>
@@ -168,7 +168,7 @@ export default function Services() {
           transition={{ duration: 0.6 }}
           style={{ textAlign: 'center', marginTop: '56px' }}
         >
-          <p style={{ color: '#8b94a5', marginBottom: '20px', fontSize: '1rem' }}>
+          <p style={{ color: 'var(--text-muted)', marginBottom: '20px', fontSize: '1rem' }}>
             Vous ne trouvez pas ce que vous cherchez ?
           </p>
           <a

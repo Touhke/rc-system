@@ -121,13 +121,13 @@ export default function Contact() {
                 {item.icon}
               </div>
               <div>
-                <div style={{ fontSize: '0.8rem', fontWeight: 600, color: '#8b94a5', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                <div style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--text-muted)', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                   {item.title}
                 </div>
                 <div style={{ fontSize: '1rem', fontWeight: 700, color: '#1a1f3a', marginBottom: '2px' }}>
                   {item.value}
                 </div>
-                <div style={{ fontSize: '0.85rem', color: '#8b94a5' }}>
+                <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
                   {item.sub}
                 </div>
               </div>
@@ -180,7 +180,7 @@ export default function Contact() {
               Support disponible 7j/7
             </div>
             <h3 style={{
-              fontFamily: 'Syne, sans-serif',
+              fontFamily: 'var(--font-display)',
               fontSize: 'clamp(1.5rem, 3vw, 2rem)',
               fontWeight: 900,
               color: 'white',

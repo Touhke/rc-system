@@ -117,7 +117,7 @@ export default function Testimonials() {
                     alignItems: 'center',
                     justifyContent: 'center',
                     color: 'white',
-                    fontFamily: 'Syne, sans-serif',
+                    fontFamily: 'var(--font-display)',
                     fontWeight: 700,
                     fontSize: '0.95rem',
                     flexShrink: 0,
@@ -126,14 +126,14 @@ export default function Testimonials() {
                   </div>
                   <div>
                     <div style={{
-                      fontFamily: 'Syne, sans-serif',
+                      fontFamily: 'var(--font-display)',
                       fontWeight: 700,
                       color: '#1a1f3a',
                       fontSize: '1rem',
                     }}>
                       {testimonials[current].name}
                     </div>
-                    <div style={{ color: '#8b94a5', fontSize: '0.875rem' }}>
+                    <div style={{ color: 'var(--text-muted)', fontSize: '0.875rem' }}>
                       {testimonials[current].role}
                     </div>
                   </div>

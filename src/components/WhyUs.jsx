@@ -63,7 +63,7 @@ export default function WhyUs() {
             Pourquoi Nous Choisir
           </div>
           <h2 style={{
-            fontFamily: 'Syne, sans-serif',
+            fontFamily: 'var(--font-display)',
             fontSize: 'clamp(2rem, 5vw, 3.5rem)',
             fontWeight: 900,
             color: 'white',
@@ -77,7 +77,7 @@ export default function WhyUs() {
               Service
             </span>
           </h2>
-          <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.05rem', maxWidth: '560px', margin: '0 auto', fontWeight: 400 }}>
+          <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.05rem', maxWidth: '560px', margin: '0 auto', fontWeight: 400 }}>
             Nous ne nous contentons pas de résoudre vos problèmes — nous construisons une relation de confiance durable avec chaque client.
           </p>
         </motion.div>
@@ -130,7 +130,7 @@ export default function WhyUs() {
                   {Icon && <Icon />}
                 </div>
                 <h3 style={{
-                  fontFamily: 'Syne, sans-serif',
+                  fontFamily: 'var(--font-display)',
                   fontSize: '1.05rem',
                   fontWeight: 700,
                   color: 'white',
@@ -140,7 +140,7 @@ export default function WhyUs() {
                 </h3>
                 <p style={{
                   fontSize: '0.92rem',
-                  color: 'rgba(255,255,255,0.6)',
+                  color: 'rgba(255,255,255,0.76)',
                   lineHeight: 1.65,
                 }}>
                   {item.desc}

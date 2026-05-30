@@ -10,8 +10,8 @@
   --navy:         #242d4a;
   --navy-light:   #2f3a54;
   --text:         #0F172A;
-  --text-light:   #5a6578;
-  --text-muted:   #8b94a5;
+  --text-light:   #475569;
+  --text-muted:   #5e6a82;
   --white:        #FFFFFF;
   --off-white:    #f8fafc;
   --light-gray:   #e8ecf1;
@@ -40,7 +40,7 @@
   --radius-md:    12px;
   --radius-lg:    16px;
   --radius-xl:    24px;
-  --font-display: 'Syne', sans-serif;
+  --font-display: 'Inter', sans-serif;
   --font-body:    'DM Sans', sans-serif;
   --whatsapp:     #25D366;
   --whatsapp-dark:#128C7E;

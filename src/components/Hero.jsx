@@ -71,7 +71,7 @@ export default function Hero() {
               fontWeight: 600,
               letterSpacing: '0.1em',
               textTransform: 'uppercase',
-              marginBottom: '28px',
+              marginBottom: '20px',
             }}
           >
             <span style={{
@@ -89,12 +89,12 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
             style={{
-              fontFamily: 'Syne, sans-serif',
-              fontSize: 'clamp(2.4rem, 5.5vw, 4rem)',
-              fontWeight: 900,
+              fontFamily: 'var(--font-display)',
+              fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
+              fontWeight: 800,
               color: 'white',
-              lineHeight: 1.1,
-              marginBottom: '24px',
+              lineHeight: 1.15,
+              marginBottom: '20px',
             }}
           >
             Votre Partenaire de{' '}
@@ -113,10 +113,10 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.3 }}
             style={{
               fontSize: '1.125rem',
-              color: 'rgba(255,255,255,0.7)',
-              lineHeight: 1.7,
-              maxWidth: '580px',
-              marginBottom: '40px',
+              color: 'rgba(255,255,255,0.85)',
+              lineHeight: 1.75,
+              maxWidth: '640px',
+              marginBottom: '36px',
               fontWeight: 400,
             }}
           >
@@ -129,7 +129,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.45 }}
-            style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginBottom: '56px' }}
+            style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginBottom: '48px' }}
           >
             <a
               href={WA_LINK}

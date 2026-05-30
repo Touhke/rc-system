@@ -59,7 +59,7 @@ export default function FinalCTA() {
           </div>
 
           <h2 style={{
-            fontFamily: 'Syne, sans-serif',
+            fontFamily: 'var(--font-display)',
             fontSize: 'clamp(2.2rem, 5vw, 3.5rem)',
             fontWeight: 900,
             color: 'white',
@@ -76,7 +76,7 @@ export default function FinalCTA() {
 
           <p style={{
             fontSize: '1.15rem',
-            color: 'rgba(255,255,255,0.65)',
+            color: 'rgba(255,255,255,0.8)',
             maxWidth: '560px',
             margin: '0 auto 40px',
             lineHeight: 1.7,

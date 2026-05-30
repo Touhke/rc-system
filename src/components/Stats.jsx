@@ -71,7 +71,7 @@ export default function Stats() {
               transition={{ duration: 0.6, delay: i * 0.15 }}
             >
               <div style={{
-                fontFamily: 'Syne, sans-serif',
+                fontFamily: 'var(--font-display)',
                 fontSize: 'clamp(2.5rem, 5vw, 3.5rem)',
                 fontWeight: 800,
                 color: 'white',
