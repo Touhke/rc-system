@@ -55,8 +55,9 @@ export default function Contact() {
               icon: <FaPhone />,
               title: 'Téléphone Secondaire',
               value: PHONE_SECONDARY,
-              sub: 'Cliquez pour ouvrir WhatsApp',
-              href: waPhone('+237 690 722 872'),
+              // ✅ CORRIGÉ : appel direct tel: (pas de WhatsApp sur ce numéro)
+              sub: 'Cliquez pour appeler directement',
+              href: 'tel:+237690722872',
               color: 'rgb(96, 165, 250)',
               bg: 'rgba(59, 130, 246, 0.08)',
               border: 'rgba(59, 130, 246, 0.2)',
@@ -85,7 +86,7 @@ export default function Contact() {
             <motion.a
               key={i}
               href={item.href}
-              target="_blank"
+              target={item.href.startsWith('tel:') || item.href.startsWith('mailto:') ? '_self' : '_blank'}
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -332,7 +333,6 @@ export default function Contact() {
             Ouvrir WhatsApp Maintenant
           </a>
 
-          {/* ✅ CORRIGÉ : lien WhatsApp au lieu de tel: */}
           <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.85rem' }}>
             Ou appelez le{' '}
             <a
