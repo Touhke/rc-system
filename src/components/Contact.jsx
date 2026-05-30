@@ -341,7 +341,7 @@ export default function Contact() {
               rel="noopener noreferrer"
               style={{ color: 'rgba(255,255,255,0.7)', fontWeight: 600, textDecoration: 'none' }}
             >
-              +237 674 161 584
+              +237 690 722 872
             </a>
           </div>
         </motion.div>
